@@ -16,8 +16,6 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/extra20dk.gif",
-            "image_mobile": "shopify:\/\/shop_images\/extra20mb.gif",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -36,8 +34,6 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/new-dk.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/new-mb.jpg",
             "heading": "",
             "heading_size": "h2",
             "subheading": "",
@@ -114,7 +110,7 @@
         "template--21506872606913__fd8003f0-fa91-4c7d-8f99-2bb233dd3615-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cartera_AW24_vs_2.jpg",
+            "image": "shopify:\/\/shop_images\/cartera_AW24_vs_2.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -124,7 +120,7 @@
         "template--21506872606913__fd8003f0-fa91-4c7d-8f99-2bb233dd3615-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mochila-AW24.jpg",
+            "image": "shopify:\/\/shop_images\/mochila-AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -134,7 +130,7 @@
         "template--21506872606913__fd8003f0-fa91-4c7d-8f99-2bb233dd3615-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/crossbody_AW24_2.0.jpg",
+            "image": "shopify:\/\/shop_images\/crossbody_AW24_2.0.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -144,7 +140,7 @@
         "column_wtWDwW": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/billeteras_AW24.jpg",
+            "image": "shopify:\/\/shop_images\/billeteras_AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -154,7 +150,7 @@
         "column_PeWwAD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/joyeria_AW24.jpg",
+            "image": "shopify:\/\/shop_images\/joyeria_AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -164,7 +160,7 @@
         "column_YY8gG4": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hanging_AW24.jpg",
+            "image": "shopify:\/\/shop_images\/hanging_AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
@@ -267,8 +263,6 @@
       "type": "image-banner",
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Banner_Secundario_desk.jpg",
-        "image_2": "shopify:\/\/shop_images\/Banner_Secundario_Mobile.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -283,24 +277,13 @@
     },
     "1718739951a016ac1d": {
       "type": "apps",
-      "blocks": {
-        "retail_rocket_personalization_markups_izrt3q": {
-          "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/markups\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-          "settings": {
-            "rrMarkupCode": "65df285b682ae6945d3f6a02",
-            "rrEmptyMarkupCode": ""
-          }
-        }
-      },
-      "block_order": [
-        "retail_rocket_personalization_markups_izrt3q"
-      ],
       "settings": {
         "include_margins": true
       }
     },
     "featured_collection_4FUai8": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Must haves",
         "heading_size": "h1",
@@ -377,6 +360,7 @@
     },
     "featured_collection_3JVqHe": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Te recomendamos",
         "heading_size": "h1",
@@ -421,6 +405,7 @@
     },
     "featured_collection_byTV9d": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
@@ -529,26 +514,6 @@
     },
     "170984209487822a28": {
       "type": "apps",
-      "blocks": {
-        "retail_rocket_personalization_markups_DKtqmL": {
-          "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/markups\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-          "settings": {
-            "rrMarkupCode": "65df27048e6a3ed9214d722b",
-            "rrEmptyMarkupCode": ""
-          }
-        },
-        "retail_rocket_personalization_markups_dXWTew": {
-          "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/markups\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-          "settings": {
-            "rrMarkupCode": "65df28388e6a3ed9214d725e",
-            "rrEmptyMarkupCode": ""
-          }
-        }
-      },
-      "block_order": [
-        "retail_rocket_personalization_markups_DKtqmL",
-        "retail_rocket_personalization_markups_dXWTew"
-      ],
       "settings": {
         "include_margins": true
       }
