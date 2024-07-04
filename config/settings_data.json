@@ -9,9 +9,9 @@
 */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-footer.webp",
+    "logo": "shopify:\/\/shop_images\/logo-footer_450x_85ef7bb7-1c64-4665-a036-f1abc6cbdaeb.webp",
     "logo_width": 200,
-    "favicon": "shopify:\/\/shop_images\/favicon_150x_598d88fc-c3a9-46c8-aca1-1bd703c1fe3a.jpg",
+    "favicon": "shopify:\/\/shop_images\/favicon_150x_450x_e78f2cc8-3e61-4ea9-9e52-4254bef22f5b.webp",
     "type_header_font": "poppins_n4",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
@@ -110,10 +110,10 @@
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.facebook.com\/amphora.peru\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/amphora_peru\/?hl=es",
+    "social_facebook_link": "https:\/\/www.facebook.com\/amphora.colombia\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/amphora_colombia\/?hl=es",
     "social_youtube_link": "https:\/\/www.youtube.com\/@amphora9148",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@amphora_peru",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@amphora_colombia",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -145,36 +145,6 @@
     "content_for_index": [
 
     ],
-    "blocks": {
-      "3162008616520556380": {
-        "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/main-code\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-        "disabled": false,
-        "settings": {
-          "rrPartnerId": "5f7e22d997a52806c8f6103b"
-        }
-      },
-      "13699062826762247329": {
-        "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/tracking-codes\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-        "disabled": false,
-        "settings": {
-          "rrExitIntentBar": "",
-          "ignoredCollections": [
-            "all",
-            "all-2",
-            "bbva",
-            "diners15",
-            "new-arrivals",
-            "reloj",
-            "pulseras",
-            "sale",
-            "todos-los-productos",
-            "mom-collection"
-          ],
-          "tagstosend": "",
-          "metafieldtosend": ""
-        }
-      }
-    },
     "color_schemes": {
       "background-1": {
         "settings": {
