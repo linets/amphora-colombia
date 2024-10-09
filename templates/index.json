@@ -12,6 +12,25 @@
     "608f3ae5-b1cf-4082-919f-3ead2712d478": {
       "type": "slideshow",
       "blocks": {
+        "slide_PieiRi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Banner-desktop_SS25.jpg",
+            "image_mobile": "shopify://shop_images/Banner-Mobile_SS25.jpg",
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "shopify://collections/new-in",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_i8paid": {
           "type": "slide",
           "disabled": true,
@@ -20,7 +39,7 @@
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
-            "link": "shopify:\/\/collections\/all-2",
+            "link": "shopify://collections/all-2",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
@@ -38,7 +57,7 @@
             "heading_size": "h2",
             "subheading": "",
             "button_label": "",
-            "link": "shopify:\/\/collections\/carteras",
+            "link": "shopify://collections/carteras",
             "button_style_secondary": false,
             "box_align": "bottom-left",
             "show_text_box": false,
@@ -48,30 +67,12 @@
             "text_alignment_mobile": "center"
           }
         },
-        "slide_PieiRi": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/MID_SEASON_SALE-DK.gif",
-            "image_mobile": "shopify:\/\/shop_images\/MID_SEASON_SALE-MB.gif",
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify:\/\/collections\/carteras",
-            "button_style_secondary": false,
-            "box_align": "bottom-left",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_tCzm63": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner_desk-chocolate_1.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/banner_MB-Chocolate.jpg",
+            "image": "shopify://shop_images/banner_desk-chocolate_1.jpg",
+            "image_mobile": "shopify://shop_images/banner_MB-Chocolate.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -88,9 +89,9 @@
         }
       },
       "block_order": [
+        "slide_PieiRi",
         "slide_i8paid",
         "6565bc0f-3939-488b-909e-7616f7e59da3",
-        "slide_PieiRi",
         "slide_tCzm63"
       ],
       "settings": {
@@ -110,61 +111,61 @@
         "template--21506872606913__fd8003f0-fa91-4c7d-8f99-2bb233dd3615-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cartera_AW24_vs_2.webp",
+            "image": "shopify://shop_images/cartera_AW24_vs_2.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/carteras-carteras-dos-asas"
+            "link": "shopify://collections/carteras-carteras-dos-asas"
           }
         },
         "template--21506872606913__fd8003f0-fa91-4c7d-8f99-2bb233dd3615-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mochila-AW24.webp",
+            "image": "shopify://shop_images/mochila-AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/mochilas"
+            "link": "shopify://collections/mochilas"
           }
         },
         "template--21506872606913__fd8003f0-fa91-4c7d-8f99-2bb233dd3615-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/crossbody_AW24_2.0.webp",
+            "image": "shopify://shop_images/crossbody_AW24_2.0.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/carteras-crossbodies"
+            "link": "shopify://collections/carteras-crossbodies"
           }
         },
         "column_wtWDwW": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/billeteras_AW24.webp",
+            "image": "shopify://shop_images/billeteras_AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/billeteras"
+            "link": "shopify://collections/billeteras"
           }
         },
         "column_PeWwAD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/joyeria_AW24.webp",
+            "image": "shopify://shop_images/joyeria_AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/accesorios-joyeria"
+            "link": "shopify://collections/accesorios-joyeria"
           }
         },
         "column_YY8gG4": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hanging_AW24.webp",
+            "image": "shopify://shop_images/hanging_AW24.webp",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/accesorios"
+            "link": "shopify://collections/accesorios"
           }
         }
       },
@@ -208,13 +209,13 @@
         "slide_CeHwqL": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MOMCOLLECTION-BANNER.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MOMCOLLECTION-MOBILE.jpg",
+            "image": "shopify://shop_images/Banner-web_Best-sellers_Chiara-y-Hera-Blanco.jpg",
+            "image_mobile": "shopify://shop_images/Banner-mobile_Best-sellers_Chiara-y-Hera-Blanco.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
-            "link": "shopify:\/\/collections\/mom-collection",
+            "link": "shopify://collections/crossbodies",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
@@ -226,14 +227,15 @@
         },
         "slide_hiKTCy": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Banner_Secundario_desk.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/Banner_Secundario_Mobile.jpg",
+            "image": "shopify://shop_images/Banner_Secundario_desk.jpg",
+            "image_mobile": "shopify://shop_images/Banner_Secundario_Mobile.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify:\/\/collections\/new-arrivals",
+            "link": "shopify://collections/new-arrivals",
             "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": true,
@@ -317,21 +319,21 @@
         "column_b6GdbQ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/CARTERAS_CROSSBODIES--AW24.jpg",
+            "image": "shopify://shop_images/CARTERAS-SS25.jpg",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/carteras-crossbodies"
+            "link": "shopify://collections/crossbodies"
           }
         },
         "column_YHLmqw": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MOCHILAS-AW24.jpg",
+            "image": "shopify://shop_images/MOCHILAS-SS25.jpg",
             "title": "",
             "text": "",
             "link_label": "",
-            "link": "shopify:\/\/collections\/mochilas"
+            "link": "shopify://collections/mochilas"
           }
         }
       },
@@ -394,7 +396,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
-        "custm_video_url": "https:\/\/www.youtube.com\/embed\/F0NdpNXrIG4?autoplay=1&controls=0&showinfo=0&loop=1&mute=1&playlist=F0NdpNXrIG4&enablejsapi=1&origin=https%3A%2F%2Fwww.ziolstore.com&widgetid=1",
+        "custm_video_url": "https://www.youtube.com/embed/Z43oSNrT3J4?autoplay=1&controls=0&showinfo=0&loop=1&mute=1&playlist=Z43oSNrT3J4",
         "video_url": "",
         "description": "",
         "full_width": true,
@@ -439,9 +441,9 @@
         "column_jeKyUM": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Envi_o_a_Domicilio_1_240x_fb52a586-6f9b-4682-aa6d-eef4dcad4af9.png",
-            "title": "<strong>ENVIO A NIVEL NACIONAL<\/strong>",
-            "text": "<p>Despachos a nivel nacional.<\/p>",
+            "image": "shopify://shop_images/Envi_o_a_Domicilio_1_240x_fb52a586-6f9b-4682-aa6d-eef4dcad4af9.png",
+            "title": "<strong>ENVIO A NIVEL NACIONAL</strong>",
+            "text": "<p>Despachos a nivel nacional.</p>",
             "link_label": "",
             "link": ""
           }
@@ -449,9 +451,9 @@
         "column_nBq4iX": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Cambios_y_Devoluciones_1_240x_88473078-3d87-499e-90b0-777452f2a71f.png",
-            "title": "<strong>CAMBIOS Y DEVOLUCIONES<\/strong>",
-            "text": "<p>Hasta 30 dias después de recibida la compra<\/p>",
+            "image": "shopify://shop_images/Cambios_y_Devoluciones_1_240x_88473078-3d87-499e-90b0-777452f2a71f.png",
+            "title": "<strong>CAMBIOS Y DEVOLUCIONES</strong>",
+            "text": "<p>Hasta 30 dias después de recibida la compra</p>",
             "link_label": "",
             "link": ""
           }
@@ -459,9 +461,9 @@
         "column_HKPHdV": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Financiacio_n_1_240x_e3c3e23b-d01d-47d6-8690-d97cb7dcf03d.png",
-            "title": "<strong>COMPRA SEGURA<\/strong>",
-            "text": "<p>Con cualquier medio de pago<\/p>",
+            "image": "shopify://shop_images/Financiacio_n_1_240x_e3c3e23b-d01d-47d6-8690-d97cb7dcf03d.png",
+            "title": "<strong>COMPRA SEGURA</strong>",
+            "text": "<p>Con cualquier medio de pago</p>",
             "link_label": "",
             "link": ""
           }
@@ -469,9 +471,9 @@
         "column_9mV8ax": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pick_up_1_240x_e3e7e410-a157-49a0-980a-9df9706e42ea.png",
-            "title": "<strong>RETIRO EN TIENDA<\/strong>",
-            "text": "<p>Sin costo de envio y en tiendas Amphora<\/p>",
+            "image": "shopify://shop_images/Pick_up_1_240x_e3e7e410-a157-49a0-980a-9df9706e42ea.png",
+            "title": "<strong>RETIRO EN TIENDA</strong>",
+            "text": "<p>Sin costo de envio y en tiendas Amphora</p>",
             "link_label": "",
             "link": ""
           }
