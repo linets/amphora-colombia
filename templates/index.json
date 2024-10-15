@@ -1,13 +1,13 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
-{
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "608f3ae5-b1cf-4082-919f-3ead2712d478": {
       "type": "slideshow",
@@ -218,7 +218,7 @@
             "link": "shopify://collections/crossbodies",
             "button_style_secondary": false,
             "box_align": "middle-center",
-            "show_text_box": true,
+            "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "scheme-1",
@@ -261,6 +261,50 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "list_collections_with_image_RKpU9m": {
+      "type": "list-collections-with-image",
+      "settings": {
+        "title": "New Trends",
+        "alignment": "text-center",
+        "featured_col": "crossbodies",
+        "slidesToShow": 4,
+        "limit_of_pro": 16,
+        "autoloop": true,
+        "delay": "5000",
+        "section_background": "#ffffff",
+        "max_width_container": 1920,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "paddingTopDesktop": 0,
+        "paddingBottomDesktop": 0,
+        "marginTopDesktop": 0,
+        "marginBottomDesktop": 0
+      }
+    },
+    "list_collections_with_image_hyWfif": {
+      "type": "list-collections-with-image",
+      "settings": {
+        "title": "Must haves",
+        "alignment": "text-center",
+        "featured_col": "crossbodies",
+        "slidesToShow": 4,
+        "limit_of_pro": 16,
+        "autoloop": true,
+        "delay": "3000",
+        "section_background": "#ffffff",
+        "max_width_container": 1920,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "paddingTopDesktop": 0,
+        "paddingBottomDesktop": 0,
+        "marginTopDesktop": 0,
+        "marginBottomDesktop": 0
+      }
+    },
     "image_banner_tpTUMg": {
       "type": "image-banner",
       "disabled": true,
@@ -275,12 +319,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
-      }
-    },
-    "1718739951a016ac1d": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
       }
     },
     "featured_collection_4FUai8": {
@@ -390,6 +428,28 @@
         "padding_bottom": 36
       }
     },
+    "list_collections_with_image_iMCz8c": {
+      "type": "list-collections-with-image",
+      "settings": {
+        "title": "Te recomendamos",
+        "alignment": "text-center",
+        "featured_col": "crossbodies",
+        "slidesToShow": 4,
+        "limit_of_pro": 16,
+        "autoloop": true,
+        "delay": "5000",
+        "section_background": "#ffffff",
+        "max_width_container": 1920,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "paddingTopDesktop": 0,
+        "paddingBottomDesktop": 0,
+        "marginTopDesktop": 0,
+        "marginBottomDesktop": 0
+      }
+    },
     "video_CNLgkC": {
       "type": "video",
       "settings": {
@@ -442,8 +502,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Envi_o_a_Domicilio_1_240x_fb52a586-6f9b-4682-aa6d-eef4dcad4af9.png",
-            "title": "<strong>ENVIO A NIVEL NACIONAL</strong>",
-            "text": "<p>Despachos a nivel nacional.</p>",
+            "title": "<strong>ENVÍOS A TODO EL PAÍS</strong>",
+            "text": "<p>Despachos a todo el país</p>",
             "link_label": "",
             "link": ""
           }
@@ -470,6 +530,7 @@
         },
         "column_9mV8ax": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Pick_up_1_240x_e3e7e410-a157-49a0-980a-9df9706e42ea.png",
             "title": "<strong>RETIRO EN TIENDA</strong>",
@@ -513,26 +574,21 @@
         "padding_top": 36,
         "padding_bottom": 100
       }
-    },
-    "170984209487822a28": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "608f3ae5-b1cf-4082-919f-3ead2712d478",
     "fd8003f0-fa91-4c7d-8f99-2bb233dd3615",
     "slideshow_yVhynx",
+    "list_collections_with_image_RKpU9m",
+    "list_collections_with_image_hyWfif",
     "image_banner_tpTUMg",
-    "1718739951a016ac1d",
     "featured_collection_4FUai8",
     "multicolumn_kwyjkY",
     "featured_collection_3JVqHe",
+    "list_collections_with_image_iMCz8c",
     "video_CNLgkC",
     "featured_collection_byTV9d",
-    "multicolumn_aJLcNC",
-    "170984209487822a28"
+    "multicolumn_aJLcNC"
   ]
 }

@@ -1,17 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
-{
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo-footer_450x_85ef7bb7-1c64-4665-a036-f1abc6cbdaeb.webp",
+    "logo": "shopify://shop_images/logo-footer_450x_85ef7bb7-1c64-4665-a036-f1abc6cbdaeb.webp",
     "logo_width": 200,
-    "favicon": "shopify:\/\/shop_images\/favicon_150x_450x_e78f2cc8-3e61-4ea9-9e52-4254bef22f5b.webp",
+    "favicon": "shopify://shop_images/favicon_150x_450x_e78f2cc8-3e61-4ea9-9e52-4254bef22f5b.webp",
     "type_header_font": "poppins_n4",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
@@ -108,12 +108,12 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.facebook.com\/amphora.colombia\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/amphora_colombia\/?hl=es",
-    "social_youtube_link": "https:\/\/www.youtube.com\/@amphora9148",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@amphora_colombia",
+    "social_facebook_link": "https://www.facebook.com/amphora.colombia/",
+    "social_instagram_link": "https://www.instagram.com/amphora_colombia/?hl=es",
+    "social_youtube_link": "https://www.youtube.com/@amphora9148",
+    "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -127,7 +127,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/logo-negro.png",
+    "checkout_logo_image": "shopify://shop_images/logo-negro.png",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -370,7 +370,7 @@
       "sale_badge_color_scheme": "accent-2",
       "sold_out_badge_color_scheme": "inverse",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

@@ -1,4 +1,13 @@
-{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
   "sections": {
     "banner": {
       "type": "main-collection-banner",
@@ -8,22 +17,26 @@
         "color_scheme": "scheme-1"
       }
     },
-    "17049860622c097c18": {
-      "type": "apps",
-      "blocks": {
-        "retail_rocket_personalization_markups_F8JfnN": {
-          "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/markups\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-          "settings": {
-            "rrMarkupCode": "65df27148e6a3ed9214d722c",
-            "rrEmptyMarkupCode": ""
-          }
-        }
-      },
-      "block_order": [
-        "retail_rocket_personalization_markups_F8JfnN"
-      ],
+    "list_collections_with_image_K33NLc": {
+      "type": "list-collections-with-image",
       "settings": {
-        "include_margins": true
+        "title": "Best Sellers",
+        "alignment": "text-center",
+        "featured_col": "crossbodies",
+        "slidesToShow": 4,
+        "limit_of_pro": 16,
+        "autoloop": true,
+        "delay": "5000",
+        "section_background": "#FFFFFF",
+        "max_width_container": 1920,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "paddingTopDesktop": 0,
+        "paddingBottomDesktop": 0,
+        "marginTopDesktop": 0,
+        "marginBottomDesktop": 0
       }
     },
     "product-grid": {
@@ -48,18 +61,6 @@
     },
     "1709842398fafd6ba7": {
       "type": "apps",
-      "blocks": {
-        "retail_rocket_personalization_markups_Lkp4p6": {
-          "type": "shopify:\/\/apps\/retail-rocket-personalization\/blocks\/markups\/eb06115a-3169-4b5b-a921-16aac205bb7d",
-          "settings": {
-            "rrMarkupCode": "65df27e78e6a3ed9214d725a",
-            "rrEmptyMarkupCode": ""
-          }
-        }
-      },
-      "block_order": [
-        "retail_rocket_personalization_markups_Lkp4p6"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -67,7 +68,7 @@
   },
   "order": [
     "banner",
-    "17049860622c097c18",
+    "list_collections_with_image_K33NLc",
     "product-grid",
     "1709842398fafd6ba7"
   ]
