@@ -186,6 +186,7 @@
       ],
       "settings": {
         "force_full_width": true,
+        "centralize": false,
         "title": "Shop by Category",
         "heading_size": "h1",
         "image_width": "full",
@@ -381,6 +382,7 @@
       ],
       "settings": {
         "force_full_width": true,
+        "centralize": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -558,6 +560,7 @@
       ],
       "settings": {
         "force_full_width": true,
+        "centralize": true,
         "title": "",
         "heading_size": "h1",
         "image_width": "half",

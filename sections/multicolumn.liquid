@@ -44,7 +44,7 @@
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop {% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider {% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider--mobile grid--peek{% endif %}{% if section.settings.swipe_on_desktop and section.blocks.size > 3 %} slider--everywhere{% endif %}"
+        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop {% if section.settings.swipe_on_mobile or section.settings.swipe_on_desktop %} slider {% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider--mobile grid--peek{% endif %}{% if section.settings.swipe_on_desktop and section.blocks.size > 3 %} slider--everywhere {% endif %} {% if section.settings.centralize %} justify-content-center {% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -83,31 +83,31 @@
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <a href="{{block.settings.link}}">
                     <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
-                  >
-                    {%- liquid
-                      assign number_of_columns = section.settings.columns_desktop
-                      assign number_of_columns_mobile = section.settings.columns_mobile
-                      assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                      if section.settings.image_width == 'half'
-                        assign image_width = 0.5
-                      elsif section.settings.image_width == 'third'
-                        assign image_width = 0.33
-                      else
-                        assign image_width = 1
-                      endif
-                    -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag: widths: '2000', sizes: sizes, class: 'multicolumn-card__image'
-                    }}
-                  </div>
+                      class="media media--transparent media--{{ section.settings.image_ratio }}"
+                      {% if section.settings.image_ratio == 'adapt' %}
+                        style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                      {% endif %}
+                    >
+                      {%- liquid
+                        assign number_of_columns = section.settings.columns_desktop
+                        assign number_of_columns_mobile = section.settings.columns_mobile
+                        assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                        if section.settings.image_width == 'half'
+                          assign image_width = 0.5
+                        elsif section.settings.image_width == 'third'
+                          assign image_width = 0.33
+                        else
+                          assign image_width = 1
+                        endif
+                      -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag: widths: '2000', sizes: sizes, class: 'multicolumn-card__image'
+                      }}
+                    </div>
                   </a>
                 </div>
               {%- endif -%}
@@ -194,7 +194,13 @@
       "type": "checkbox",
       "id": "force_full_width",
       "default": false,
-      "label": "full width"
+      "label": "Full width"
+    },
+    {
+      "type": "checkbox",
+      "id": "centralize",
+      "default": false,
+      "label": "Centralize"
     },
     {
       "type": "inline_richtext",
