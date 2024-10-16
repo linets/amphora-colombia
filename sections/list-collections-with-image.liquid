@@ -1,0 +1,283 @@
+{{ 'list-of-collections-with-image.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign config = section.settings
+  assign margin_top = config.marginTop | append: 'px'
+  assign margin_bottom = config.marginBottom | append: 'px'
+  assign padding_top = config.paddingTop | append: 'px'
+  assign padding_bottom = config.paddingBottom | append: 'px'
+  assign section_padding = padding_top | append: ' 0px ' | append: padding_bottom | append: ' 0px'
+  assign section_margin = margin_top | append: ' 0 ' | append: margin_bottom | append: ' 0'
+
+  assign margin_top_desktop = config.marginTopDesktop | append: 'px'
+  assign margin_bottom_desktop = config.marginBottomDesktop | append: 'px'
+  assign padding_top_desktop = config.paddingTopDesktop | append: 'px'
+  assign padding_bottom_desktop = config.paddingBottomDesktop | append: 'px'
+  assign section_padding_desktop = padding_top_desktop | append: ' 0px ' | append: padding_bottom_desktop | append: ' 0px'
+  assign section_margin_desktop = margin_top_desktop | append: ' 0 ' | append: margin_bottom_desktop | append: ' 0'
+-%}
+<div
+  id="collections-image"
+  style="--background: {{ config.section_background }}; --padding:{{ section_padding }}; --margin: {{ section_margin }}; --padding-desktop:{{ section_padding_desktop }}; --margin-desktop: {{ section_margin_desktop }};"
+>
+  <div class="container" style="--max-width: {{ config.max_width_container }}px;">
+    {%- unless config.title == blank -%}
+      <div class="top {{ config.alignment }}">
+        {%- if config.title -%}
+          <h2>{{ config.title }}</h2>
+        {%- endif -%}
+        {%- if config.subtitle -%}
+          <p>{{ config.subtitle }}</p>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+    <div class="row">
+      <div class="content">
+        <div class="left">
+          <div class="swiper-button-prev prev-{{ section.id }}"></div>
+        </div>
+        <div class="item item-collection swiper mySwiper-{{ section.id }}">
+          <div class="swiper-wrapper">
+            {%- if config.featured_col != blank -%}
+              {%- assign collection = collections[config.featured_col] -%}
+              {% assign limit_pro = config.limit_of_pro %}
+              {% for product in collection.products limit: limit_pro %}
+                <div class="product-item swiper-slide">
+                  {% render 'card-product', card_product: product %}
+                </div>
+              {% endfor %}
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="right">
+          <div class="swiper-button-next next-{{ section.id }}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var numberOfColumns = parseInt('{{ config.slidesToShow }}', 10);
+    var swiperElement = document.querySelector('.mySwiper-{{ section.id }}');
+    var swiperInstance;
+
+    function initializeSwiper() {
+      var slidesToShow;
+      var spaceBetweens;
+
+      if (window.innerWidth >= 1024) {
+        slidesToShow = numberOfColumns;
+        spaceBetweens = 26;
+      } else if (window.innerWidth >= 787 && window.innerWidth < 1024) {
+        slidesToShow = 3;
+        spaceBetweens = 20;
+      } else {
+        slidesToShow = 2;
+        spaceBetweens = 19;
+      }
+
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+      }
+
+      swiperInstance = new Swiper('.mySwiper-{{ section.id }}', {
+        spaceBetween: spaceBetweens,
+        slidesPerView: slidesToShow,
+        navigation: {
+          nextEl: '.next-{{ section.id }}',
+          prevEl: '.prev-{{ section.id }}',
+        },
+        autoplay: {
+          delay: parseInt('{{ config.delay }}', 10),
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        loop: '{{ config.autoloop }}' === 'true',
+      });
+    }
+
+    if (swiperElement) {
+      initializeSwiper();
+    }
+
+    window.addEventListener('resize', function () {
+      initializeSwiper();
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "List Collections Image",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-center"
+    },
+    {
+      "type": "collection",
+      "id": "featured_col",
+      "label": "Choose a collection"
+    },
+    {
+      "type": "range",
+      "id": "slidesToShow",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "unit": ".",
+      "label": "Number of Columns Desktop",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "limit_of_pro",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "label": "Products Shown",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "autoloop",
+      "label": "Auto Loop",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "delay",
+      "label": "Delay",
+      "options": [
+        {
+          "value": "3000",
+          "label": "3s"
+        },
+        {
+          "value": "4000",
+          "label": "4s"
+        },
+        {
+          "value": "5000",
+          "label": "5s"
+        },
+        {
+          "value": "6000",
+          "label": "6s"
+        }
+      ],
+      "default": "5000"
+    },
+    {
+      "type": "header",
+      "content": "Customize Section"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "customize Container"
+    },
+    {
+      "type": "number",
+      "id": "max_width_container",
+      "label": "Max Width",
+      "default": 1920,
+      "info": "Unit px"
+    },
+    {
+      "type": "header",
+      "content": "Section space mobile"
+    },
+    {
+      "type": "number",
+      "id": "paddingTop",
+      "label": "Padding top",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "number",
+      "id": "paddingBottom",
+      "label": "Padding bottom",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "number",
+      "id": "marginTop",
+      "label": "Margin top",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "number",
+      "id": "marginBottom",
+      "label": "Margin bottom",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "header",
+      "content": "Section space desktop"
+    },
+    {
+      "type": "number",
+      "id": "paddingTopDesktop",
+      "label": "Padding top",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "number",
+      "id": "paddingBottomDesktop",
+      "label": "Padding bottom",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "number",
+      "id": "marginTopDesktop",
+      "label": "Margin top",
+      "default": 0,
+      "info": "Unit px"
+    },
+    {
+      "type": "number",
+      "id": "marginBottomDesktop",
+      "label": "Margin bottom",
+      "default": 0,
+      "info": "Unit px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "List Collections Image"
+    }
+  ]
+}
+{% endschema %}
