@@ -1,3 +1,7 @@
+.multicolumn .justify-content-center {
+  justify-content: center;
+}
+
 .multicolumn .title {
   margin: 0;
 }
