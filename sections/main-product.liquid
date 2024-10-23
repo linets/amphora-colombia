@@ -112,14 +112,14 @@
                   </div>
                 {%- endif -%}
                 {% comment %}
-                <div class="product__tax caption rte">
-                  {%- if cart.taxes_included -%}
-                    {{ 'products.product.include_taxes' | t }}
-                  {%- endif -%}
-                  {%- if shop.shipping_policy.body != blank -%}
-                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                  {%- endif -%}
-                </div>
+                  <div class="product__tax caption rte">
+                    {%- if cart.taxes_included -%}
+                      {{ 'products.product.include_taxes' | t }}
+                    {%- endif -%}
+                    {%- if shop.shipping_policy.body != blank -%}
+                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- endif -%}
+                  </div>
                 {% endcomment %}
                 <div {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
@@ -305,14 +305,14 @@
                                   </dt>
                                   <dd>
                                     <s class="variant-item__old-price">
-                                      {{ variant_price_compare | money_with_currency }}
+                                      {{ variant_price_compare | money_without_trailing_zeros }}
                                     </s>
                                   </dd>
                                 </dl>
                               {%- endif -%}
                               {%- if current_qty_for_volume_pricing < volume_pricing_array.last.minimum_quantity -%}
                                 {%- assign variant_price = product.selected_or_first_available_variant.price
-                                  | money_with_currency
+                                  | money_without_trailing_zeros
                                 -%}
                                 <span class="price-per-item--current">
                                   {{- 'products.product.volume_pricing.price_at_each' | t: price: variant_price -}}
@@ -320,7 +320,7 @@
                               {%- else -%}
                                 {%- for price_break in volume_pricing_array -%}
                                   {%- if current_qty_for_volume_pricing >= price_break.minimum_quantity -%}
-                                    {%- assign price_break_price = price_break.price | money_with_currency -%}
+                                    {%- assign price_break_price = price_break.price | money_without_trailing_zeros -%}
                                     <span class="price-per-item--current">
                                       {{-
                                         'products.product.volume_pricing.price_at_each'
@@ -334,7 +334,7 @@
                             </div>
                           {%- else -%}
                             {%- assign variant_price = product.selected_or_first_available_variant.price
-                              | money_with_currency
+                              | money_without_trailing_zeros
                             -%}
                             {%- assign variant_price_compare = product.selected_or_first_available_variant.compare_at_price -%}
                             <div class="price-per-item">
@@ -345,7 +345,7 @@
                                   </dt>
                                   <dd>
                                     <s class="variant-item__old-price">
-                                      {{ variant_price_compare | money_with_currency }}
+                                      {{ variant_price_compare | money_without_trailing_zeros }}
                                     </s>
                                   </dd>
                                   <dt class="visually-hidden">
@@ -401,14 +401,14 @@
                             <li>
                               <span>{{ product.selected_or_first_available_variant.quantity_rule.min }}+</span>
                               {%- assign price = product.selected_or_first_available_variant.price
-                                | money_with_currency
+                                | money_without_trailing_zeros
                               -%}
                               <span data-text="{{ 'products.product.volume_pricing.price_at_each' | t: price: variant_price }}">
                                 {{- 'sections.quick_order_list.each' | t: money: price -}}
                               </span>
                             </li>
                             {%- for price_break in product.selected_or_first_available_variant.quantity_price_breaks -%}
-                              {%- assign price_break_price = price_break.price | money_with_currency -%}
+                              {%- assign price_break_price = price_break.price | money_without_trailing_zeros -%}
                               <li class="{%- if forloop.index >= 3 -%}show-more-item hidden{%- endif -%}">
                                 <span>
                                   {{- price_break.minimum_quantity -}}
@@ -636,7 +636,8 @@
               <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                 {% if product.metafields.custom.correa_ajustable != blank %}
                   <div>
-                    <strong>Correa ajustable:</strong> <span>{{ product.metafields.custom.correa_ajustable.value }}</span>
+                    <strong>Correa ajustable:</strong>
+                    <span>{{ product.metafields.custom.correa_ajustable.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.con_monedero != blank %}
@@ -646,32 +647,38 @@
                 {% endif %}
                 {% if product.metafields.custom.compartimiento_notebook != blank %}
                   <div>
-                    <strong>Compartimiento notebook:</strong> <span>{{ product.metafields.custom.compartimiento_notebook.value }}</span>
+                    <strong>Compartimiento notebook:</strong>
+                    <span>{{ product.metafields.custom.compartimiento_notebook.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.cierres_interiores != blank %}
                   <div>
-                    <strong>Cierres interiores:</strong> <span>{{ product.metafields.custom.cierres_interiores.value }}</span>
+                    <strong>Cierres interiores:</strong>
+                    <span>{{ product.metafields.custom.cierres_interiores.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.cierres_exteriores != blank %}
                   <div>
-                    <strong>Cierres exteriores:</strong> <span>{{ product.metafields.custom.cierres_exteriores.value }}</span>
+                    <strong>Cierres exteriores:</strong>
+                    <span>{{ product.metafields.custom.cierres_exteriores.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.bolsillos_interiores != blank %}
                   <div>
-                    <strong>Bolsillos interiores:</strong> <span>{{ product.metafields.custom.bolsillos_interiores.value }}</span>
+                    <strong>Bolsillos interiores:</strong>
+                    <span>{{ product.metafields.custom.bolsillos_interiores.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.bolsillos_exteriores != blank %}
                   <div>
-                    <strong>Bolsillos exteriores:</strong> <span>{{ product.metafields.custom.bolsillos_exteriores.value }}</span>
+                    <strong>Bolsillos exteriores:</strong>
+                    <span>{{ product.metafields.custom.bolsillos_exteriores.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.bolsillo_trasero != blank %}
                   <div>
-                    <strong>Bolsillo trasero:</strong> <span>{{ product.metafields.custom.bolsillo_trasero.value }}</span>
+                    <strong>Bolsillo trasero:</strong>
+                    <span>{{ product.metafields.custom.bolsillo_trasero.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.ancho != blank %}
@@ -686,7 +693,8 @@
                 {% endif %}
                 {% if product.metafields.custom.altura_plataforma != blank %}
                   <div>
-                    <strong>Altura plataforma:</strong> <span>{{ product.metafields.custom.altura_plataforma.value }}</span>
+                    <strong>Altura plataforma:</strong>
+                    <span>{{ product.metafields.custom.altura_plataforma.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.altura_correa != blank %}
@@ -711,12 +719,14 @@
                 {% endif %}
                 {% if product.metafields.custom.accesorio_adicional != blank %}
                   <div>
-                    <strong>Accesorio adicional:</strong> <span>{{ product.metafields.custom.accesorio_adicional.value }}</span>
+                    <strong>Accesorio adicional:</strong>
+                    <span>{{ product.metafields.custom.accesorio_adicional.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.acabado_del_metal != blank %}
                   <div>
-                    <strong>Acabado del metal:</strong> <span>{{ product.metafields.custom.acabado_del_metal.value }}</span>
+                    <strong>Acabado del metal:</strong>
+                    <span>{{ product.metafields.custom.acabado_del_metal.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.global.temporada != blank %}
@@ -746,7 +756,8 @@
                 {% endif %}
                 {% if product.metafields.custom.pulgadas_notebook != blank %}
                   <div>
-                    <strong>Pulgadas notebook:</strong> <span>{{ product.metafields.custom.pulgadas_notebook.value }}</span>
+                    <strong>Pulgadas notebook:</strong>
+                    <span>{{ product.metafields.custom.pulgadas_notebook.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.nombre_style != blank %}
@@ -756,12 +767,14 @@
                 {% endif %}
                 {% if product.metafields.custom.material_plantilla != blank %}
                   <div>
-                    <strong>Material plantilla:</strong> <span>{{ product.metafields.custom.material_plantilla.value }}</span>
+                    <strong>Material plantilla:</strong>
+                    <span>{{ product.metafields.custom.material_plantilla.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.material_forro_interior != blank %}
                   <div>
-                    <strong>Material forro interior:</strong> <span>{{ product.metafields.custom.material_forro_interior.value }}</span>
+                    <strong>Material forro interior:</strong>
+                    <span>{{ product.metafields.custom.material_forro_interior.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.material_suela != blank %}
@@ -771,7 +784,8 @@
                 {% endif %}
                 {% if product.metafields.custom.material_capellada != blank %}
                   <div>
-                    <strong>Material capellada:</strong> <span>{{ product.metafields.custom.material_capellada.value }}</span>
+                    <strong>Material capellada:</strong>
+                    <span>{{ product.metafields.custom.material_capellada.value }}</span>
                   </div>
                 {% endif %}
                 {% if product.metafields.custom.litros != blank %}
@@ -809,12 +823,12 @@
                     <strong>Filtro uv:</strong> <span>{{ product.metafields.custom.filtro_uv.value }}</span>
                   </div>
                 {% endif %}
-                 {% if product.metafields.custom.correa_intercambiable != blank %}
+                {% if product.metafields.custom.correa_intercambiable != blank %}
                   <div>
-                    <strong>Correa intercambiable:</strong> <span>{{ product.metafields.custom.correa_intercambiable.value }}</span>
+                    <strong>Correa intercambiable:</strong>
+                    <span>{{ product.metafields.custom.correa_intercambiable.value }}</span>
                   </div>
                 {% endif %}
-                
               </div>
             </details>
           </div>
@@ -964,12 +978,12 @@
 </section>
 
 <script>
-// Function to fetch products from Shopify
-async function fetchProducts() {
-  const shopDomain = '5ad240-2.myshopify.com'; // Replace 'your-shop' with your actual Shopify shop domain
-  const storefrontAccessToken = '186d9b65f865999cd2ec4a54f0723e2c'; // Replace with your actual Storefront access token
+  // Function to fetch products from Shopify
+  async function fetchProducts() {
+    const shopDomain = '5ad240-2.myshopify.com'; // Replace 'your-shop' with your actual Shopify shop domain
+    const storefrontAccessToken = '186d9b65f865999cd2ec4a54f0723e2c'; // Replace with your actual Storefront access token
 
-  const query = `
+    const query = `
     {
       products(first: 10) {
         edges {
@@ -991,31 +1005,29 @@ async function fetchProducts() {
     }
   `;
 
-  const response = await fetch(`https://${shopDomain}/api/2024-01/graphql.json`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Shopify-Access-Token': storefrontAccessToken,
-    },
-    body: JSON.stringify({ query }),
-  });
+    const response = await fetch(`https://${shopDomain}/api/2024-01/graphql.json`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Access-Token': storefrontAccessToken,
+      },
+      body: JSON.stringify({ query }),
+    });
 
-  const responseData = await response.json(); 
+    const responseData = await response.json();
 
-  return responseData.data.products.edges.map(edge => edge.node);
-}
+    return responseData.data.products.edges.map((edge) => edge.node);
+  }
 
-// Example usage
-fetchProducts()
-  .then(products => {
-    console.log("====", products);
-  })
-  .catch(error => {
-    console.error('Error fetching products:', error);
-  });
-
+  // Example usage
+  fetchProducts()
+    .then((products) => {
+      console.log('====', products);
+    })
+    .catch((error) => {
+      console.error('Error fetching products:', error);
+    });
 </script>
-
 
 {% schema %}
 {
