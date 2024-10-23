@@ -379,19 +379,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    
-    <script>
-      function updatePrice(){
-        var prices = document.querySelectorAll(`.price-item`);
-        if (!prices)return;
-        for (var each of prices){
-          each.innerText = each.innerText.replace('.00', '');
-        }
-      }
-       window.onload = function() {
-        setTimeout(updatePrice, 50);
-      }
-    </script>
-    
   </body>
 </html>
