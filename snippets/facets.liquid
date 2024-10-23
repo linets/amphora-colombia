@@ -88,15 +88,15 @@
                         <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                           <span class="active-facets__button-inner button button--tertiary">
                             {%- if filter.min_value.value -%}
-                              {{ filter.min_value.value | money }}
+                              {{ filter.min_value.value | money_without_trailing_zeros }}
                             {%- else -%}
-                              {{ 0 | money }}
+                              {{ 0 | money_without_trailing_zeros }}
                             {%- endif -%}
                             -
                             {%- if filter.max_value.value -%}
-                              {{ filter.max_value.value | money }}
+                              {{ filter.max_value.value | money_without_trailing_zeros }}
                             {%- else -%}
-                              {{ filter.range_max | money }}
+                              {{ filter.range_max | money_without_trailing_zeros }}
                             {%- endif -%}
                             {% render 'icon-close-small' %}
                             <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
@@ -437,7 +437,11 @@
                       class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                     >
                       <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
-                        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+                        {%- assign max_price_amount = filter.range_max
+                          | money_without_trailing_zeros
+                          | strip_html
+                          | escape
+                        -%}
                         <span class="facets__selected">
                           {{- 'products.facets.max_price' | t: price: max_price_amount -}}
                         </span>
@@ -535,15 +539,15 @@
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                         <span class="active-facets__button-inner button button--tertiary">
                           {%- if filter.min_value.value -%}
-                            {{ filter.min_value.value | money }}
+                            {{ filter.min_value.value | money_without_trailing_zeros }}
                           {%- else -%}
-                            {{ 0 | money }}
+                            {{ 0 | money_without_trailing_zeros }}
                           {%- endif -%}
                           -
                           {%- if filter.max_value.value -%}
-                            {{ filter.max_value.value | money }}
+                            {{ filter.max_value.value | money_without_trailing_zeros }}
                           {%- else -%}
-                            {{ filter.range_max | money }}
+                            {{ filter.range_max | money_without_trailing_zeros }}
                           {%- endif -%}
                           {% render 'icon-close-small' %}
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
@@ -954,7 +958,11 @@
                             {{ filter.label | escape }}
                           </button>
 
-                          {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+                          {%- assign max_price_amount = filter.range_max
+                            | money_without_trailing_zeros
+                            | strip_html
+                            | escape
+                          -%}
                           <p class="mobile-facets__info">
                             {{ 'products.facets.max_price' | t: price: max_price_amount }}
                           </p>
@@ -1128,15 +1136,15 @@
             <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
               <span class="active-facets__button-inner button button--tertiary">
                 {%- if filter.min_value.value -%}
-                  {{ filter.min_value.value | money }}
+                  {{ filter.min_value.value | money_without_trailing_zeros }}
                 {%- else -%}
-                  {{ 0 | money }}
+                  {{ 0 | money_without_trailing_zeros }}
                 {%- endif -%}
                 -
                 {%- if filter.max_value.value -%}
-                  {{ filter.max_value.value | money }}
+                  {{ filter.max_value.value | money_without_trailing_zeros }}
                 {%- else -%}
-                  {{ filter.range_max | money }}
+                  {{ filter.range_max | money_without_trailing_zeros }}
                 {%- endif -%}
                 {% render 'icon-close-small' %}
                 <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
@@ -1245,15 +1253,15 @@
                   <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                     <span class="active-facets__button-inner button button--tertiary">
                       {%- if filter.min_value.value -%}
-                        {{ filter.min_value.value | money }}
+                        {{ filter.min_value.value | money_without_trailing_zeros }}
                       {%- else -%}
-                        {{ 0 | money }}
+                        {{ 0 | money_without_trailing_zeros }}
                       {%- endif -%}
                       -
                       {%- if filter.max_value.value -%}
-                        {{ filter.max_value.value | money }}
+                        {{ filter.max_value.value | money_without_trailing_zeros }}
                       {%- else -%}
-                        {{ filter.range_max | money }}
+                        {{ filter.range_max | money_without_trailing_zeros }}
                       {%- endif -%}
                       {% render 'icon-close-small' %}
                       <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
