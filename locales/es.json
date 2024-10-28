@@ -551,7 +551,7 @@
         "region_placeholder": "Departamento",
         "last_name_label": "Apellido / Razón social",
         "optional_last_name_label": "Apellido / Razón social",
-        "optional_first_name_label": "Nombre (No completar para factura)",
+        "optional_first_name_label": "Nombre ",
         "province_label": "Departamento",
         "province_placeholder": "Departamento",
         "governorate_label": "Municipio",
